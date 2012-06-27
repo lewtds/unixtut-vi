@@ -1,15 +1,13 @@
-<!--?xml version="1.0" encoding="UTF-8"?-->
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title> Hướng dẫn </title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="Copyright" content="Michael Stonebank, 1995-2003">
-    <link href="unixtut2.css" rel="stylesheet" type="text/css">
-    <link href="unixtut2-print.css" rel="stylesheet" type="text/css"
-      media="print">
-  </head>
-  <body>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><!--?xml version="1.0" encoding="UTF-8"?--><title>Hướng dẫn</title>
+
+
+  
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Copyright" content="Michael Stonebank, 1995-2003" />
+    <link href="unixtut2.css" rel="stylesheet" type="text/css" />
+    <link href="unixtut2-print.css" rel="stylesheet" type="text/css" media="print" /></head><body>
     <div id="container">
       <h1> </h1>
       <h2>1.1 Liệt kê tập tin và thư mục </h2>
@@ -23,45 +21,53 @@
       <p>Lệnh <span class="command">ls</span> ( chữ 'L' và 'S' viết
         thường ) liệt kê nội dung của thư mục hiện tại.</p>
       <p align="center"> <img src="media/unix-xterm1.gif" alt="Unix
-          Terminal - running the ls command" height="269" width="491"></p>
+          Terminal - running the ls command" height="269" width="491" /></p>
       <p>Có thể thư mục nhà riêng của bạn sẽ không có tập tin nào nhìn
         thấy được, trong trường hợp này, câu lệnh sẽ trở lại dấu nháy
         UNIX. Còn không, có thể đã có một số tập tin được đặt sẵn bởi
-        người quản trị khi tài khoản của bạn được thiết lập.<br>
+        người quản trị khi tài khoản của bạn được thiết lập.<br />
       </p>
-      <p> Thực chất <span class="command">ls</span> không hiển thị tất
-        cả các tập tin trong thư mục của bạn <br>
-      </p>
-      <p><span class="command">ls</span> does not, in fact, cause all
-        the files in your home directory to be listed, but only those
-        ones whose name does not begin with a dot (.) Files beginning
-        with a dot (.) are known as hidden files and usually contain
-        important program configuration information. They are hidden
-        because you should not change them unless you are very familiar
-        with UNIX!!! </p>
-      <p> To list all files in your home directory including those whose
-        names begin with a dot, type </p>
+      <p> Thực chất <span class="command">ls</span>
+không hiển thị tất cả các tập tin trong thư mục của bạn mà chỉ những
+tập tin không bắt đầu với dấu chấm (.). Các tập tin bắt đầu với dấu
+chấm được gọi là tập tin ẩn và thường chứa những thiết lập quan trọng
+của nhiều phần mềm. Chúng được ẩn đi vì bạn không nên thay đổi chúng
+trừ khi bạn đã rất thành thạo UNIX!!</p>
+<p>Để liệt kê tất cả các tập tin trong thư mục nhà riêng kể cả thư mục ẩn, bạn gõ:</p>
+ 
       <p class="cli">% ls -a</p>
-      <p>As you can see, <span class="command">ls -a</span> lists files
-        that are normally hidden. </p>
+      
+<p>Như bạn có thể thấy,&nbsp;<span class="command">ls -a</span> liệt kê cả các tập tin ẩn.<br />
+ </p>
+
       <p align="center"><img src="media/unix-xterm2.gif" alt="Unix
-          Terminal - running the ls command" height="269" width="491"> </p>
-      <p><span class="command">ls</span> is an example of a command
-        which can take options: <b>-a</b> is an example of an option.
-        The options change the behaviour of the command. There are
-        online manual pages that tell you which options a particular
-        command can take, and how each option modifies the behaviour of
-        the command. (See later in this tutorial) </p>
-      <h2>1.2 Making Directories </h2>
+          Terminal - running the ls command" height="269" width="491" /> </p>
+      
+<p><span class="command">ls</span>&nbsp;là một ví dụ của lệnh cho phép thêm lựa chọn: <span style="font-weight: bold;">-a</span>
+là một lựa chọn. Lựa chọn có thể thay đổi cách hoạt động của lệnh. Có
+các trang hướng dẫn sử dụng trực tiếp cho bạn biết tất cả các lựa chọn
+có thể và cách chúng thay đổi hoạt động của một lệnh bất kỳ. (Xem phần
+sau của hướng dẫn này)<br />
+ </p>
+
+      <h2>1.2 Tạo thư mục mới<br />
+ </h2>
       <h3>mkdir (make directory) </h3>
-      <p> We will now make a subdirectory in your home directory to hold
-        the files you will be creating and using in the course of this
-        tutorial. To make a subdirectory called unixstuff in your
-        current working directory type </p>
+      
+<p>Bây giờ chúng ta sẽ tạo một thư mục mới trong thư mục nhà riêng của
+bạn để chứa các tập tin mà chúng ta sẽ tạo ra trong suốt bài hướng dẫn
+này. Để tạo một thư mục con tên là unixstuff trong thư mục hiện tại,
+bạn gõ:<br />
+ </p>
+
       <p class="cli">% mkdir unixstuff </p>
-      <p> To see the directory you have just created, type </p>
+      
+<p>Để thấy được thư mục vừa tạo, bạn gõ:<br />
+ </p>
+
       <p class="cli">% ls </p>
-      <h2>1.3 Changing to a different directory&nbsp;</h2>
+      <h2>1.3 Di chuyển sang một thư mục khác<br />
+</h2>
       <h3>cd (change directory)</h3>
       <p> The command <span class="command">cd <var>directory</var></span>
         means change the current working directory to <i>'directory'</i>.
@@ -115,10 +121,9 @@
         the <b>home</b> sub-directory, which is in the top-level root
         directory called " <i>/ " </i>. </p>
       <p align="center"><img src="media/unix-tree.png" alt="Unix File
-          structure" height="316" width="560"></p>
+          structure" height="316" width="560" /></p>
       <h3>Exercise 1b</h3>
-      <p>Use the commands <span class="command">cd,</span> <span
-          class="command">ls</span> and <span class="command">pwd</span>
+      <p>Use the commands <span class="command">cd,</span> <span class="command">ls</span> and <span class="command">pwd</span>
         to explore the file system. </p>
       <p> (Remember, if you get lost, type <span class="command">cd</span>
         by itself to return to your home-directory) </p>
@@ -193,18 +198,8 @@
           </tr>
         </tbody>
       </table>
-      <p class="navbar" align="center"><a href="unixintro.html"><img
-            src="media/left.gif" alt="Previous" border="0" height="39"
-            width="37"></a> <a href="index.html"><img
-            src="media/home.gif" alt="Home" border="0" height="39"
-            width="81"></a><a href="unix2.html"><img
-            src="media/right.gif" alt="Next" border="0" height="39"
-            width="37"></a></p>
-      <p align="center"><iframe
-src="http://rcm.amazon.com/e/cm?t=unixtutorialf-20&amp;o=1&amp;p=13&amp;l=ur1&amp;category=home&amp;banner=1KCJXE8FXDSDTBZ6SWG2&amp;f=ifr"
-          border="0" marginwidth="0" style="border:none;"
-          frameborder="0" height="60" scrolling="no" width="468"></iframe></p>
+      <p class="navbar" align="center"><a href="unixintro.html"><img src="media/left.gif" alt="Previous" border="0" height="39" width="37" /></a> <a href="index.html"><img src="media/home.gif" alt="Home" border="0" height="39" width="81" /></a><a href="unix2.html"><img src="media/right.gif" alt="Next" border="0" height="39" width="37" /></a></p>
+      <p align="center"><iframe src="http://rcm.amazon.com/e/cm?t=unixtutorialf-20&amp;o=1&amp;p=13&amp;l=ur1&amp;category=home&amp;banner=1KCJXE8FXDSDTBZ6SWG2&amp;f=ifr" border="0" marginwidth="0" style="border: medium none ;" frameborder="0" height="60" scrolling="no" width="468" /></p>
       <p class="date">M.Stonebank@surrey.ac.uk, © 9th October 2000 </p>
     </div>
-  </body>
-</html>
+  </body></html>
