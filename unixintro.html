@@ -51,43 +51,65 @@
         người dùng gõ lệnh&nbsp;<span class="command">rm myfile</span> (tức là người dùng muốn xóa tập tin
         <span style="font-weight: bold;">myfile</span>). Vỏ sẽ tìm trong hệ thống tập tin một tập tin có có chứa
         lệnh&nbsp;<span class="command">rm</span>, sau đó nó yêu cầu nhân (thông qua các lời gọi hệ thống)
-        thực thi chương trình&nbsp;<span class="command">rm</span> đối với tập tin <span style="font-weight: bold;">myfile</span>. Khi tiến trình&nbsp;<span class="command">rm myfile</span> đã kết thúc, vỏ sẽ giao lại dấu nhắc UNIX % cho người
+        thực thi chương trình&nbsp;<span class="command">rm</span> đối với tập tin <span style="font-weight: bold;">myfile</span>. Khi tiến trình&nbsp;<span class="command">rm myfile</span> đã kết thúc, vỏ sẽ giao lại dấu nhắc uUNIX % cho người
         dùng, thể hiện rằng nó đang đợi để thực hiện thêm các lệnh khác.<br />
       </p>
 
-      <h3>Vỏ<br />
+      <h3>Vỏ điều hành<br />
       </h3>
-      <p>The shell acts as an interface between the user and the kernel.
-        When a user logs in, the login program checks the username and
-        password, and then starts another program called the shell. The
-        shell is a command line interpreter (CLI). It interprets the
-        commands the user types in and arranges for them to be carried
-        out. The commands are themselves programs: when they terminate,
-        the shell gives the user another prompt (% on our systems). </p>
-      <p> The adept user can customise his/her own shell, and users can
-        use different shells on the same machine. Staff and students in
-        the school have the <b>tcsh shell</b> by default. </p>
-      <p> The tcsh shell has certain features to help the user inputting
-        commands.</p>
-      <p> Filename Completion - By typing part of the name of a command,
-        filename or directory and pressing the [<b>Tab</b>] key, the
-        tcsh shell will complete the rest of the name automatically. If
-        the shell finds more than one name beginning with those letters
-        you have typed, it will beep, prompting you to type a few more
-        letters before pressing the tab key again. </p>
-      <p> History - The shell keeps a list of the commands you have
-        typed in. If you need to repeat a command, use the cursor keys
-        to scroll up and down the list or type history for a list of
-        previous commands. </p>
+      
+<p>Vỏ đóng vai trò là kênh giao tiếp trung gian giữa người sử dụng và
+nhân. Khi người sử dụng đăng nhập, phần mềm sẽ kiểm tra tên đăng nhập
+(username) và mật khẩu (password) và sau đó khởi động một chương trình
+khác là vỏ. Vỏ là một phần mềm phiên dịch dòng lệnh (command line
+interpreter - CLI). Nó phiên dịch các lệnh mà người sử dụng nhập vào và
+sắp xếp thứ tự thực hiện cho chúng. Các lệnh thực chất là các chương
+trình: khi chúng kết thúc, vỏ sẽ đưa lại dấu nhắc cho người sử dụng ($
+hoặc %).<br />
+ </p>
+
+      
+<p>Người dùng thành thạo có thể tự tùy biến vỏ điều hành của chính
+mình, và người sử dụng có thể sử dụng các vỏ khác nhau trên cùng một
+máy. Vỏ thông dụng nhất hiện nay là <span style="font-weight: bold;">vỏ bash</span>.<br />
+ </p>
+
+      
+<p>Vỏ bash có một vài tính năng giúp người sử dụng dễ dàng nhập lệnh hơn như sau:<br />
+</p>
+
+      
+<p>Tự động điền tên tập tin - Bằng cách gõ một phần đầu tên lệnh, tập tin hay thư mục rồi sau đó nhấn phím [<span style="font-weight: bold;">Tab</span>],
+vỏ bash sẽ tự động điền nốt phần còn lại của chúng. Nếu vỏ tìm thấy
+nhiều hơn một tên bắt đầu với những ký tự bạn nhập, nó sẽ tạo ra một
+tiếng động, thông báo với bạn phải nhập thêm một vài ký tự nữa trước
+khi nhấn phím [<span style="font-weight: bold;">Tab</span>] một lần nữa. Nếu bạn nhấn phím [<span style="font-weight: bold;">Tab</span>] hai lần thì nó sẽ liệt kê tất cả các mục bắt đầu với những ký tự đó.<br />
+ </p>
+
+      
+<p>Lịch sử dòng lệnh - Vỏ giữ một danh sách các lệnh mà bạn đã nhập Nếu
+bạn muốn lặp lại một lệnh nào đó, hãy dùng các phím mũi tên để duyệt
+lên, xuống danh sách các lệnh đã nhập.<br />
+ </p>
+
       <p> </p>
       <h2>Tập tin và các tiến trình<br />
       </h2>
-      <p>Everything in UNIX is either a file or a process. </p>
-      <p> A process is an executing program identified by a unique PID
-        (process identifier). </p>
-      <p> A file is a collection of data. They are created by users
-        using text editors, running compilers etc. </p>
-      <p> Examples of files: </p>
+      
+<p>Tất cả mọi thứ trong UNIX là một trong 2 thứ: tập tin hoặc tiến trình.<br />
+ </p>
+
+      
+<p>Một tiến trình là một chương trình đang hoạt động được xác định bởi
+một mã PID (process identifier - mã định danh tiến trình) độc nhất.<br />
+ </p>
+
+      
+<p>Một tập tin là một tập hợp dữ liệu. Chúng được tạo ra bởi người dùng khi sử dụng phần mềm gõ văn bản, biên dịch,...<br />
+ </p>
+
+      <p>Ví dụ về tập tin:<br />
+ </p>
       <ul>
         <li> a document (report, essay etc.) </li>
         <li> the text of a program written in some high-level
@@ -102,27 +124,31 @@
       <p> </p>
       <h2>Cấu trúc cây thư mục<br />
       </h2>
-      <p>All the files are grouped together in the directory structure.
-        The file-system is arranged in a hierarchical structure, like an
-        inverted tree. The top of the hierarchy is traditionally called
-        <strong>root</strong> (written as a slash / ) </p>
+      
+<p>Tất cả các tập tin được nhóm lại với nhau trong cấu trúc cây thư
+mục. Hệ thống tập tin được sắp xếp theo cấu trúc phân cấp, giống như
+một cái cây cắm ngược. Đỉnh của cấu trúc theo truyền thống được gọi là <span style="font-weight: bold;">root</span> (nghĩa là gốc cây, viết bằng một dấu xổ phải / ).<br />
+ </p>
+
       <p align="center"><img src="media/unix-tree.png" alt="Unix File
           Structure" height="316" width="560" /></p>
-      <p> In the diagram above, we see that the home directory of the
-        undergraduate student <b>"ee51vn"</b> contains two
-        sub-directories (<b>docs</b> and <b>pics</b>) and a file called
-        <b>report.doc</b>. </p>
-      <p>The full path to the file <b>report.doc</b> is <b>"/home/its/ug1/ee51vn/report.doc"
-        </b></p>
+      
+<p>Trong biểu đồ trên, ta có thể thấy thư mục nhà riêng của sinh viên "<span style="font-weight: bold;">ee51vn</span>" chứa 2 thư mục con là <span style="font-weight: bold;">docs</span> cùng <span style="font-weight: bold;">pics</span> và một tập tin tên là <span style="font-weight: bold;">report.doc</span></p>
+<p>Đường dẫn đầy đủ đến tập tin <span style="font-weight: bold;">report.doc</span> là "<span style="font-weight: bold;">/home/its/ug1/ee51vn/report.doc</span>"</p>
+
       <h2>Khởi động thiết bị đầu cuối UNIX (terminal)<br />
       </h2>
-      <p>To open an UNIX terminal window, click on the "Terminal" icon
+      
+<p>To open an UNIX terminal window, click on the "Terminal" icon
         from Applications/Accessories menus.</p>
+
       <p align="center"><img src="media/gnome-window.gif" alt="Gnome
           Menus" height="396" width="518" /></p>
       <p>&nbsp;</p>
-      <p> An UNIX Terminal window will then appear with a % prompt,
-        waiting for you to start entering commands.</p>
+      
+<p>Một cửa sổ thiết bị đầu cuối UNIX sẽ hiện ra với dấu nhắc, đợi bạn nhập lệnh.<br />
+</p>
+
       <p align="center"><img src="media/unix-xterm0.gif" alt="Unix
           Terminal window" height="269" width="491" /></p>
       <p>&nbsp;</p>
