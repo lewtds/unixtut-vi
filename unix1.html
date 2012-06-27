@@ -1,205 +1,249 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><!--?xml version="1.0" encoding="UTF-8"?--><title>Hướng dẫn</title>
-
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<!--?xml version="1.0" encoding="UTF-8"?-->
+  <title>Hướng dẫn</title>
 
   
-    
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="Copyright" content="Michael Stonebank, 1995-2003" />
-    <link href="unixtut2.css" rel="stylesheet" type="text/css" />
-    <link href="unixtut2-print.css" rel="stylesheet" type="text/css" media="print" /></head><body>
-    <div id="container">
-      <h1> </h1>
-      <h2>1.1 Liệt kê tập tin và thư mục </h2>
-      <h3>ls (list) </h3>
-      <p> Khi bạn đăng nhập, thư mục hiện tại sẽ là thư mục nhà riêng
-        của bạn. Thư mục nhà riêng sẽ trùng tên với tên đăng nhập, ví
-        dụ, <b>ee91ab</b>, và đó là nơi chứa các tập tin và thư mục con
-        của bạn.</p>
-      <p> Để biết trong thư mục nhà riêng có những gì, hãy gõ: </p>
-      <p class="cli">% ls </p>
-      <p>Lệnh <span class="command">ls</span> ( chữ 'L' và 'S' viết
-        thường ) liệt kê nội dung của thư mục hiện tại.</p>
-      <p align="center"> <img src="media/unix-xterm1.gif" alt="Unix
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  
+  <meta name="Copyright" content="Michael Stonebank, 1995-2003" />
+
+  
+  <link href="unixtut2.css" rel="stylesheet" type="text/css" />
+
+  
+  <link href="unixtut2-print.css" rel="stylesheet" type="text/css" media="print" />
+
+</head><body>
+<div id="container">
+<h1> </h1>
+<h2>1.1 Liệt kê tập tin và thư mục </h2>
+<h3>ls (list - liệt kê) </h3>
+<p> Khi bạn đăng nhập, thư mục hiện tại sẽ là nhà riêng của
+bạn. Thư mục nhà riêng sẽ trùng tên với tên đăng nhập, ví dụ, <b>ee91ab</b>,
+và đó là nơi chứa các tập tin và thư mục con của bạn.</p>
+<p> Để biết trong nhà riêng có những gì, hãy gõ </p>
+<p class="cli">% ls </p>
+<p>Lệnh <span class="command">ls</span> ( chữ 'L' và 'S' viết thường )
+liệt kê nội dung của thư mục hiện tại.</p>
+<p align="center"> <img src="media/unix-xterm1.gif" alt="Unix
           Terminal - running the ls command" height="269" width="491" /></p>
-      <p>Có thể thư mục nhà riêng của bạn sẽ không có tập tin nào nhìn
-        thấy được, trong trường hợp này, câu lệnh sẽ trở lại dấu nháy
-        UNIX. Còn không, có thể đã có một số tập tin được đặt sẵn bởi
-        người quản trị khi tài khoản của bạn được thiết lập.<br />
-      </p>
-      <p> Thực chất <span class="command">ls</span>
+<p>Có thể nhà riêng của bạn sẽ không có tập tin nào nhìn thấy
+được, trong trường hợp này, câu lệnh sẽ trở lại dấu nháy UNIX. Còn
+không, có thể đã có một số tập tin được đặt sẵn bởi người quản trị khi
+tài khoản của bạn được thiết lập.<br />
+</p>
+<p>Tuy nhiên, thực chất thì <span class="command">ls</span>
 không hiển thị tất cả các tập tin trong thư mục của bạn mà chỉ những
-tập tin không bắt đầu với dấu chấm (.). Các tập tin bắt đầu với dấu
+tập tin không bắt đầu với dấu chấm (.) Các tập tin bắt đầu với dấu
 chấm được gọi là tập tin ẩn và thường chứa những thiết lập quan trọng
 của nhiều phần mềm. Chúng được ẩn đi vì bạn không nên thay đổi chúng
-trừ khi bạn đã rất thành thạo UNIX!!</p>
-<p>Để liệt kê tất cả các tập tin trong thư mục nhà riêng kể cả thư mục ẩn, bạn gõ:</p>
- 
-      <p class="cli">% ls -a</p>
-      
-<p>Như bạn có thể thấy,&nbsp;<span class="command">ls -a</span> liệt kê cả các tập tin ẩn.<br />
- </p>
-
-      <p align="center"><img src="media/unix-xterm2.gif" alt="Unix
+trừ khi bạn đã rất thành thạo UNIX!!!</p>
+<p>Để liệt kê tất cả các tập tin trong thư mục nhà riêng kể cả thư mục
+ẩn, bạn gõ</p>
+<p class="cli">% ls -a</p>
+<p>Như bạn có thể thấy,&nbsp;<span class="command">ls -a</span> liệt kê
+cả các tập tin ẩn.<br />
+</p>
+<p align="center"><img src="media/unix-xterm2.gif" alt="Unix
           Terminal - running the ls command" height="269" width="491" /> </p>
-      
-<p><span class="command">ls</span>&nbsp;là một ví dụ của lệnh cho phép thêm lựa chọn: <span style="font-weight: bold;">-a</span>
+<p><span class="command">ls</span>&nbsp;là một ví dụ của lệnh cho phép
+thêm lựa chọn: <span style="font-weight: bold;">-a</span>
 là một lựa chọn. Lựa chọn có thể thay đổi cách hoạt động của lệnh. Có
-các trang hướng dẫn sử dụng trực tiếp cho bạn biết tất cả các lựa chọn
+các trang hướng dẫn sử dụng trực tiếp (online man pages) cho bạn biết tất cả các lựa chọn
 có thể và cách chúng thay đổi hoạt động của một lệnh bất kỳ. (Xem phần
 sau của hướng dẫn này)<br />
- </p>
-
-      <h2>1.2 Tạo thư mục mới<br />
- </h2>
-      <h3>mkdir (make directory) </h3>
-      
-<p>Bây giờ chúng ta sẽ tạo một thư mục mới trong thư mục nhà riêng của
-bạn để chứa các tập tin mà chúng ta sẽ tạo ra trong suốt bài hướng dẫn
-này. Để tạo một thư mục con tên là unixstuff trong thư mục hiện tại,
-bạn gõ:<br />
- </p>
-
-      <p class="cli">% mkdir unixstuff </p>
-      
-<p>Để thấy được thư mục vừa tạo, bạn gõ:<br />
- </p>
-
-      <p class="cli">% ls </p>
-      <h2>1.3 Di chuyển sang một thư mục khác<br />
+</p>
+<h2>1.2 Tạo thư mục mới<br />
 </h2>
-      <h3>cd (change directory)</h3>
-      <p> The command <span class="command">cd <var>directory</var></span>
-        means change the current working directory to <i>'directory'</i>.
-        The current working directory may be thought of as the directory
-        you are in, i.e. your current position in the file-system tree.
-      </p>
-      <p> To change to the directory you have just made, type </p>
-      <p class="cli">% cd unixstuff </p>
-      <p> Type <span class="command">ls</span> to see the contents
-        (which should be empty) </p>
-      <h3>Exercise 1a</h3>
-      <p>Make another directory inside the <strong>unixstuff</strong>
-        directory called <strong>backups</strong> </p>
-      <h2>1.4 The directories . and .. </h2>
-      <p>Still in the <strong>unixstuff</strong> directory, type </p>
-      <p class="cli"> % ls -a </p>
-      <p> As you can see, in the <strong>unixstuff</strong> directory
-        (and in all other directories), there are two special
-        directories called (<strong>.</strong>) and (<strong>..</strong>)</p>
-      <h3>The current directory (.) </h3>
-      <p>In UNIX, (<strong>.</strong>) means the current directory, so
-        typing </p>
-      <p class="cli"> % cd . </p>
-      <p class="hint">NOTE: there is a space between cd and the dot</p>
-      <p> means stay where you are (the <strong>unixstuff</strong>
-        directory). </p>
-      <p>This may not seem very useful at first, but using (<strong>.</strong>)
-        as the name of the current directory will save a lot of typing,
-        as we shall see later in the tutorial. </p>
-      <h3>The parent directory (..) </h3>
-      <p> (<strong>..</strong>) means the parent of the current
-        directory, so typing </p>
-      <p class="cli"> % cd .. </p>
-      <p> will take you one directory up the hierarchy (back to your
-        home directory). Try it now. </p>
-      <p> Note: typing <span class="command">cd</span> with no argument
-        always returns you to your home directory. This is very useful
-        if you are lost in the file system. </p>
-      <h2>1.5 Pathnames </h2>
-      <h3>pwd (print working directory) </h3>
-      <p> Pathnames enable you to work out where you are in relation to
-        the whole file-system. For example, to find out the absolute
-        pathname of your home-directory, type <span class="command">cd</span>
-        to get back to your home-directory and then type </p>
-      <p class="cli"> % pwd </p>
-      <p> The full pathname will look something like this - </p>
-      <p class="output"> <strong>/home/its/ug1/ee51vn</strong></p>
-      <p> which means that <b>ee51vn</b> (your home directory) is in
-        the sub-directory <b>ug1</b> (the group directory),which in
-        turn is located in the <b>its</b> sub-directory, which is in
-        the <b>home</b> sub-directory, which is in the top-level root
-        directory called " <i>/ " </i>. </p>
-      <p align="center"><img src="media/unix-tree.png" alt="Unix File
+<h3>mkdir (make directory - tạo thư mục) </h3>
+<p>Bây giờ chúng ta sẽ tạo một thư mục mới trong nhà riêng của
+bạn để chứa các tập tin mà chúng ta sẽ tạo ra trong suốt bài hướng dẫn
+này. Để tạo một thư mục con tên là <span style="font-weight: bold;">unixstuff</span> trong thư mục hiện tại,
+bạn gõ:<br />
+</p>
+<p class="cli">% mkdir unixstuff </p>
+<p>Để thấy được thư mục vừa tạo, bạn gõ<br />
+</p>
+<p class="cli">% ls </p>
+<h2>1.3 Di chuyển sang một thư mục khác<br />
+</h2>
+<h3>cd (change directory - thay đổi thư mục)</h3>
+
+<p>Lệnh <span class="command">cd <var>directory</var> </span>nghĩa là chuyển thư
+mục hiện tại sang '<span style="font-style: italic;">directory</span>'.
+Thư mục hiện tại tức là thư mục bạn đang truy cập, nói cách khác là vị
+trí hiện tại của bạn trong cây thư mục.</p>
+<p>Để di chuyển sang thư mục vừa mới tạo, bạn gõ</p>
+ 
+<p class="cli">% cd unixstuff </p>
+<p>Gõ&nbsp;<span class="command">ls</span> để hiện nội dung (sẽ không có gì hết)<br />
+ </p>
+
+<h3>Bài tập 1a</h3>
+<p><strong><span style="font-weight: normal;">Tạo một thư mục nữa trong <span style="font-weight: bold;">unixstuff</span> có tên là <span style="font-weight: bold;">backups</span></span><br />
+</strong> </p>
+
+<h2>1.4 Thư mục . và .. </h2>
+<p>Vẫn trong <span style="font-weight: bold;">unixstuff</span>, bạn gõ<br />
+ </p>
+
+<p class="cli"> % ls -a</p>
+<p>Như bạn thấy, trong thư mục <span style="font-weight: bold;">unixstuff</span> (và trong tất cả các thư mục khác), có hai thư mục đặc biệt tên là (.) và (..)</p>
+
+<h3>Thư mục hiện tại&nbsp; (.) </h3>
+<p>Trong UNIX, (.) là thư mục hiện tại, vậy nếu gõ:<br />
+
+</p>
+
+<p class="cli"> % cd . </p>
+<p class="hint">CHÚ Ý: có một dấu cách giữa lệnh cd và dấu chấm<br />
+</p>
+
+<p>nghĩa là đứng yên tại chỗ (vẫn trong <span style="font-weight: bold;">unixstuff</span>).<br />
+ </p>
+
+<p>Ban đầu thì trông có vẻ vô dụng, nhưng việc sử dụng (.) làm tên thư
+mục hiện tại có thể giúp bạn phải gõ ít hơn rất nhiều, như bạn sẽ thấy
+ở các phần sau.<br />
+ </p>
+
+<h3>Thư mục mẹ (..)</h3>
+<p>(..) là thư mục mẹ của thư mục hiện tại, vậy gõ</p>
+ 
+<p class="cli"> % cd .. </p>
+<p>sẽ đưa bạn lên một nấc cao hơn trong cây thư mục (trở lại thư mục nhà riêng). Hãy thử xem.<br />
+ </p>
+
+<p>Chú ý: gõ&nbsp;<span class="command">cd</span> không có đối số sẽ luôn luôn đưa bạn đến thư mục nhà riêng. Việc này rất hữu ích nếu bạn bị lạc trong hệ thống tập tin.<br />
+ </p>
+
+<h2>1.5 Tên đường dẫn<br />
+ </h2>
+<h3>pwd (print working directory - in thư mục hiện tại) </h3>
+<p>Tên đường dẫn cho bạn biết vị trí của bạn trong toàn bộ hệ thống tập
+tin. Ví dụ, để tìm ra đường dẫn tuyệt đối đến thư mục nhà riêng, bạn
+gõ&nbsp;<span class="command">cd</span> để di chuyển về thư mục nhà riêng rồi sau đó gõ<br />
+ </p>
+
+
+<p class="cli"> % pwd </p>
+<p>Tên đường dẫn đầy đủ sẽ trông giống như thế này<br />
+ </p>
+
+<p class="output"> <strong>/home/its/ug1/ee51vn</strong></p>
+<p>nghĩa là <span style="font-weight: bold;">ee51vn</span> (thư mục nhà riêng của bạn) là thư mục con <span style="font-weight: bold;">của ug1</span> (thư mục của nhóm tài khoản), chính nó lại là thư mục con của <span style="font-weight: bold;">its</span>, nằm trong thư mục home, nằm trong thư mục root "/" ở bậc cao nhất.<br />
+ </p>
+
+<p align="center"><img src="media/unix-tree.png" alt="Unix File
           structure" height="316" width="560" /></p>
-      <h3>Exercise 1b</h3>
-      <p>Use the commands <span class="command">cd,</span> <span class="command">ls</span> and <span class="command">pwd</span>
-        to explore the file system. </p>
-      <p> (Remember, if you get lost, type <span class="command">cd</span>
-        by itself to return to your home-directory) </p>
-      <h2>1.6 More about home directories and pathnames </h2>
-      <h3>Understanding pathnames</h3>
-      <p>First type cd to get back to your home-directory, then type</p>
-      <p class="cli"> % ls unixstuff</p>
-      <p>to list the conents of your unixstuff directory.</p>
-      <p>Now type </p>
-      <p class="cli"> % ls backups</p>
-      <p> You will get a message like this - </p>
-      <p class="output"> backups: No such file or directory </p>
-      <p> The reason is, <strong>backups</strong> is not in your
-        current working directory. To use a command on a file (or
-        directory) not in the current working directory (the directory
-        you are currently in), you must either <span class="command">cd</span>
-        to the correct directory, or specify its full pathname. To list
-        the contents of your backups directory, you must type </p>
-      <p class="cli"> % ls unixstuff/backups </p>
-      <p>&nbsp;</p>
-      <h3>~ (your home directory) </h3>
-      <p>Home directories can also be referred to by the tilde <strong>~</strong>
-        character. It can be used to specify paths starting at your home
-        directory. So typing </p>
-      <p class="cli"> % ls ~/unixstuff</p>
-      <p> will list the contents of your unixstuff directory, no matter
-        where you currently are in the file system. </p>
-      <p> What do you think </p>
-      <p class="cli"> % ls ~</p>
-      <p> would list? </p>
-      <p> What do you think </p>
-      <p class="cli"> % ls ~/.. </p>
-      <p> would list? </p>
-      <h2>Summary </h2>
-      <table align="center" border="1" cellpadding="5" cellspacing="0">
-        <tbody>
-          <tr>
-            <th>Command</th>
-            <th>Meaning</th>
-          </tr>
-          <tr>
-            <td class="command">ls</td>
-            <td>list files and directories</td>
-          </tr>
-          <tr>
-            <td class="command">ls -a</td>
-            <td>list all files and directories</td>
-          </tr>
-          <tr>
-            <td class="command">mkdir</td>
-            <td>make a directory</td>
-          </tr>
-          <tr>
-            <td class="command">cd <i>directory</i></td>
-            <td>change to named directory</td>
-          </tr>
-          <tr>
-            <td class="command">cd</td>
-            <td>change to home-directory</td>
-          </tr>
-          <tr>
-            <td class="command">cd ~</td>
-            <td>change to home-directory</td>
-          </tr>
-          <tr>
-            <td class="command">cd ..</td>
-            <td>change to parent directory</td>
-          </tr>
-          <tr>
-            <td class="command">pwd</td>
-            <td>display the path of the current directory</td>
-          </tr>
-        </tbody>
-      </table>
-      <p class="navbar" align="center"><a href="unixintro.html"><img src="media/left.gif" alt="Previous" border="0" height="39" width="37" /></a> <a href="index.html"><img src="media/home.gif" alt="Home" border="0" height="39" width="81" /></a><a href="unix2.html"><img src="media/right.gif" alt="Next" border="0" height="39" width="37" /></a></p>
-      <p align="center"><iframe src="http://rcm.amazon.com/e/cm?t=unixtutorialf-20&amp;o=1&amp;p=13&amp;l=ur1&amp;category=home&amp;banner=1KCJXE8FXDSDTBZ6SWG2&amp;f=ifr" border="0" marginwidth="0" style="border: medium none ;" frameborder="0" height="60" scrolling="no" width="468" /></p>
-      <p class="date">M.Stonebank@surrey.ac.uk, © 9th October 2000 </p>
-    </div>
-  </body></html>
+<h3>Bài tập 1b</h3>
+<p>Hãy sử dụng lệnh&nbsp;<span class="command">cd</span>,&nbsp;<span class="command">ls</span> và&nbsp;<span class="command">pwd</span> để khám phá hệ thống tập tin.</p>
+<p>(Nếu bạn bị lạc, dùng lệnh&nbsp;<span class="command">cd</span> không có đối số để trở lại nhà riêng)<br />
+ </p>
+
+
+<h2>1.6 Chi tiết hơn về thư mục nhà riêng và tên đường dẫn<br />
+ </h2>
+<h3>Tên đường dẫn<br />
+</h3>
+<p>Gõ&nbsp;<span class="command">cd</span> để trở về nhà riêng, sau đó gõ</p>
+
+<p class="cli"> % ls unixstuff</p>
+<p>để liệt kê nội dung của thư mục unixstuff.</p>
+<p>Bây giờ gõ<br />
+ </p>
+<p class="cli"> % ls backups</p>
+<p>Bạn sẽ nhận được thông báo như sau<br />
+ </p>
+<p class="output"> backups: No such file or directory</p><span style="font-weight: bold;" />
+<p>(<span style="font-style: italic;">không có tập tin hay thư mục nào như vậy</span>)<br />
+</p>
+
+<p>Lý do là vì <span style="font-weight: bold;">backups</span> không
+nằm trong thư mục hiện tại của bạn. Để sử dụng một lệnh đối với một tập
+tin hay một thư mục không nằm trong thư mục hiện tại, bạn phải
+dùng&nbsp;<span class="command">cd</span> để di chuyển hoặc gõ đường dẫn đầy đủ. Để liệt kê nội dung của thư mục <span style="font-weight: bold;">backups</span>, bạn phải gõ như sau:<br />
+</p>
+<p class="cli"> % ls unixstuff/backups </p>
+
+<h3>~ (thư mục nhà riêng) </h3>
+<p>Thư mục nhà riêng cũng có thể được thay thế bằng ký tự dấu ngã <span style="font-weight: bold;">~</span>. Nó có thể được dùng để viết đầy đủ các đường dẫn xuất phát từ nhà riêng của bạn. Vậy nếu gõ<br />
+ </p>
+
+<p class="cli"> % ls ~/unixstuff</p>
+<p>thì UNIX sẽ liệt kê nội dung thư mục <span style="font-weight: bold;">unixstuff</span>, không cần biết bạn đang ở đâu trong hệ thống tập tin.<br />
+ </p>
+
+<p>Bạn nghĩ<br />
+ </p>
+<p class="cli"> % ls ~</p>
+<p>sẽ liệt kê những gì?<br />
+  </p>
+<p>Và còn<br />
+ </p>
+<p class="cli"> % ls ~/.. </p>
+<p>sẽ liệt kê những gì?<br />
+ </p>
+<h2>Tổng kết <br />
+ </h2>
+<table align="center" border="1" cellpadding="5" cellspacing="0">
+  <tbody>
+    <tr>
+      <th>Lệnh</th>
+      <th>Ý nghĩa<br />
+</th>
+    </tr>
+    <tr>
+      <td class="command">ls</td>
+      <td>liệt kê tập tin và thư mục<br />
+</td>
+    </tr>
+    <tr>
+      <td class="command">ls -a</td>
+      <td>liệt kê tất cả các tập tin và thư mục<br />
+</td>
+    </tr>
+    <tr>
+      <td class="command">mkdir</td>
+      <td>tạo thư mục mới<br />
+</td>
+    </tr>
+    <tr>
+      <td class="command">cd <i>directory</i></td>
+      <td>di chuyển tới một thư mục<br />
+</td>
+    </tr>
+    <tr>
+      <td class="command">cd</td>
+      <td>di chuyển đến thư mục nhà riêng<br />
+</td>
+    </tr>
+    <tr>
+      <td class="command">cd ~</td>
+      <td>di chuyển đến thư mục nhà riêng<br />
+</td>
+    </tr>
+    <tr>
+      <td class="command">cd ..</td>
+      <td>di chuyển đến thư mục mẹ<br />
+</td>
+    </tr>
+    <tr>
+      <td class="command">pwd</td>
+      <td>hiện đầy đủ đường dẫn của thư mục hiện tại<br />
+</td>
+    </tr>
+  </tbody>
+</table>
+<p class="navbar" align="center"><a href="unixintro.html"><img src="media/left.gif" alt="Previous" border="0" height="39" width="37" /></a>
+<a href="index.html"><img src="media/home.gif" alt="Home" border="0" height="39" width="81" /></a><a href="unix2.html"><img src="media/right.gif" alt="Next" border="0" height="39" width="37" />&nbsp;&nbsp;&nbsp; <br />
+</a></p>
+<p align="center"><iframe src="http://rcm.amazon.com/e/cm?t=unixtutorialf-20&amp;o=1&amp;p=13&amp;l=ur1&amp;category=home&amp;banner=1KCJXE8FXDSDTBZ6SWG2&amp;f=ifr" border="0" marginwidth="0" style="border: medium none ;" frameborder="0" height="60" scrolling="no" width="468">&amp;lt;/p&amp;gt;
+&amp;lt;p class="date"&amp;gt;M.Stonebank@surrey.ac.uk, © 9th October 2000
+&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;</iframe></p>
+</div>
+
+</body></html>
