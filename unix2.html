@@ -18,214 +18,253 @@
 </head><body>
 <div id="container">
 <h1>Hướng dẫn 2<br />
- </h1>
+</h1>
 <h2>2.1 Sao chép tập tin<br />
 </h2>
 <h3>cp (copy - sao chép)</h3>
-
-
-<p><span class="command">cp file1 file2</span>&nbsp;là lệnh dùng để sao chép nội dung tập tin <span style="font-weight: bold;">file1</span> trong thư mục hiện tại sang một tập tin mới và gọi nó là <span style="font-weight: bold;">file2</span><br />
+<p><span class="command">cp file1 file2</span>&nbsp;là lệnh dùng để sao
+chép nội dung tập tin <span style="font-weight: bold;">file1</span>
+trong thư mục hiện tại sang một tập tin mới và gọi nó là <span style="font-weight: bold;">file2</span>.<br />
 </p>
-<p>Bây giờ chúng ta sẽ chọn một tập tin bất kỳ trong hệ thống và sử dụng lệnh&nbsp;<span class="command">cp</span> để sao chép nó về thư mục nhà riêng.<br />
- </p>
-
+<p>Bây giờ chúng ta sẽ chọn một tập tin bất kỳ trong hệ thống và sử
+dụng lệnh&nbsp;<span class="command">cp</span> để sao chép nó về thư
+mục nhà riêng.<br />
+</p>
 <p>Đầu tiên,&nbsp;<span class="command">cd</span> về thư mục <span style="font-weight: bold;">unixstuff</span> của bạn.<br />
 </p>
-
 <p class="cli"> % cd ~/unixstuff</p>
 <p>Sau đó, gõ<br />
- </p>
-
-<p class="cli"> % cp /etc/hosts . </p>
-<p class="hint">Chú ý: Đừng quên dấu chấm . ở cuối. Hãy nhớ, trong UNIX, dấu chấm nghĩa là thư mục hiện tại.<br />
+</p>
+<p class="cli"> % cp ~/Downloads/science.txt . </p>
+<p class="hint">Chú ý: Đừng quên dấu chấm . ở cuối. Hãy nhớ, trong
+UNIX, dấu chấm nghĩa là thư mục hiện tại.<br />
+</p>
+<p>Lệnh trên nghĩa là chép tập tin <span style="font-weight: bold;">science.txt</span>
+về thư mục hiện tại, giữ nguyên tên tập tin.</p>
+<p class="hint">Ghi chú: bạn có thể tải tập tin <span style="font-weight: bold;">science.txt</span> tại <a href="science.txt">đây</a>.
 </p>
 
-<p>Lệnh trên nghĩa là chép tập tin <span style="font-weight: bold;">hosts</span> về thư mục hiện tại, giữ nguyên tên tập tin.<br />
- </p>
-
-
 <h3>Bài tập 2a</h3>
-<p><strong><span style="font-weight: normal;">Tạo một bản sao lưu của tập tin <span style="font-weight: bold;">hosts</span> bằng cách sao chép nó sang tập tin <span style="font-weight: bold;">hosts.bak</span></span><br />
+<p><strong><span style="font-weight: normal;">Tạo một bản sao lưu của
+tập tin <span style="font-weight: bold;">hosts</span> bằng cách sao
+chép nó sang tập tin <span style="font-weight: bold;">hosts.bak</span></span><br />
 </strong> </p>
-
 <h2>2.2 Di chuyển tập tin<br />
 </h2>
 <h3>mv (move - di chuyển)</h3>
-<p><strong><span style="font-weight: normal;"><span class="command">mv file1 file2</span>&nbsp;di chuyển (hoặc đổi tên) <span style="font-weight: bold;">file1</span> thành <span style="font-weight: bold;">file2</span></span><br />
+<p><strong><span style="font-weight: normal;"><span class="command">mv
+file1 file2</span>&nbsp;di chuyển (hoặc đổi tên) <span style="font-weight: bold;">file1</span> thành <span style="font-weight: bold;">file2</span></span><br />
 </strong> </p>
-
-<p>Để di chuyển một tập tin từ nơi này sang nơi khác, bạn sử dụng lệnh&nbsp;<span class="command">mv</span>. Lệnh này di chuyển chứ không sao chép tập tin nên cuối cùng bạn sẽ có một chứ không phải hai tập tin.<br />
- </p>
-
-<p>Nhưng nó cũng có thể được dùng để đổi tên tập tin, bằng cách di chuyển đến chính thư mục hiện tại, nhưng với một cái tên khác.<br />
+<p>Để di chuyển một tập tin từ nơi này sang nơi khác, bạn sử dụng
+lệnh&nbsp;<span class="command">mv</span>. Lệnh này di chuyển chứ không
+sao chép tập tin nên cuối cùng bạn sẽ có một chứ không phải hai tập tin.<br />
+</p>
+<p>Nhưng nó cũng có thể được dùng để đổi tên tập tin, bằng cách di
+chuyển đến chính thư mục hiện tại, nhưng với một cái tên khác.<br />
 </p>
 <p>Bây giờ chúng ta sẽ di chuyển tập tin hosts.bak sang thư mục sao lưu.<br />
- 
 </p>
-<p>First, change directories to your unixstuff directory (can you
-remember how?). Then, inside the <strong>unixstuff</strong> directory,
-type</p>
-<p>Đầu tiên, di chuyển về thư mục unixstuff (bạn còn nhớ cách làm không?). Sau đó, trong thư mục <span style="font-weight: bold;">unixstuff</span>, tạo thư mục <span style="font-weight: bold;">backups</span> rồi di chuyển hosts.bak vào đó<br />
+<p>Đầu tiên, di chuyển về thư mục unixstuff (bạn còn nhớ cách làm
+không?). Sau đó, trong thư mục <span style="font-weight: bold;">unixstuff</span>,
+tạo thư mục <span style="font-weight: bold;">backups</span> rồi di
+chuyển hosts.bak vào đó<br />
 </p>
-
-<p class="cli"> % mv hosts.bak backups/.</p>
-<p>Gõ&nbsp;<span class="command">ls</span> và&nbsp;<span class="command">ls backups</span> để xem nó đã hoạt động chưa.<br />
+<p class="cli"> % mv science.bak backups/.</p>
+<p>Gõ&nbsp;<span class="command">ls</span> và&nbsp;<span class="command">ls
+backups</span> để xem nó đã hoạt động chưa.<br />
 </p>
-
 <h2>2.3 Xóa tập tin và thư mục<br />
- </h2>
-
+</h2>
 <h3>rm (remove - xóa), rmdir (remove directory - xóa thư mục)</h3>
-
-<p>To delete (remove) a file, use the <span class="command">rm</span>
-command. As an example, we are going to create a copy of the <strong>science.txt</strong>
-file then delete it. </p>
-<p> Inside your <strong>unixstuff</strong> directory, type</p>
+<p>Để xóa một tập tin, bạn dùng lệnh&nbsp;<span class="command">rm</span>.
+Ví dụ, chúng ta sẽ tạo một bản sao của tập tin science.txt sau đó xóa
+nó đi.</p>
+<p>Trong thư mục <span style="font-weight: bold;">unixstuff</span>,
+bạn gõ</p>
 <p class="cli"> % cp science.txt tempfile.txt<br />
 % ls<br />
 % rm tempfile.txt <br />
 % ls</p>
-<p> You can use the <span class="command">rmdir</span> command to
-remove a directory (make sure it is empty first). Try to remove the <strong>backups</strong>
-directory. You will not be able to since UNIX will not let you remove a
-non-empty directory.</p>
-<h3>Exercise 2b</h3>
-<p>Create a directory called <strong>tempstuff</strong> using <span class="command">mkdir</span> , then remove it using the <span class="command">rmdir</span> command.</p>
-<h2>2.4 Displaying the contents of a file on the screen </h2>
-<h3>clear (clear screen)</h3>
-<p>Before you start the next section, you may like to clear the
-terminal window of the previous commands so the output of the following
-commands can be clearly understood. </p>
-<p> At the prompt, type </p>
+<p>Bạn có thể dùng lệnh&nbsp;<span class="command">rmdir</span> để xóa
+một thư mục (nhưng phải chắc chắn nó không có gì ở trong đã). Thử xóa
+thư mục <span style="font-weight: bold;">backups</span> xem. Bạn sẽ
+không làm được vì UNIX sẽ không cho phép bạn xóa một thư mục không rỗng.<br />
+</p>
+<h3>Bài tập 2b</h3>
+<p>Tạo thư mục tên là <span style="font-weight: bold;">tempstuff</span>
+sử dụng lệnh&nbsp;<span class="command">mkdir</span>, sau đó xóa nó đi
+dùng lệnh&nbsp;<span class="command">rmdir</span>.<br />
+</p>
+<h2>2.4 Hiển thị nội dung của tập tin<br />
+</h2>
+<h3>clear (dọn màn hình)</h3>
+<p>Trước khi bắt đầu sang phần sau, có thể bạn sẽ muốn dọn sạch kết quả
+của các lệnh trước khỏi cửa sổ thiết bị cuối để dễ dàng quan sát kết
+quả của các lệnh sau hơn.</p>
+<p>Ở dấu nhắc, gõ</p>
 <p class="cli"> % clear </p>
-<p> This will clear all text and leave you with the % prompt at the top
-of the window. </p>
+<p>Lệnh này sẽ xóa tất cả các ký tự trên màn hình và đưa cho bạn dấu
+nhắc ở trên cùng cửa sổ.<br />
+</p>
 <p>&nbsp;</p>
-<h3>cat (concatenate)</h3>
-<p>The command cat can be used to display the contents of a file on the
-screen. Type: </p>
+<h3>cat (concatenate - móc nối)</h3>
+<p>Lệnh này có thể được dùng để hiển thị nội dung của tập tin ra màn
+hình. Bạn gõ:<br />
+</p>
 <p class="cli"> % cat science.txt </p>
-<p> As you can see, the file is longer than than the size of the
-window, so it scrolls past making it unreadable. </p>
+<p>Như bạn có thể thấy, nội dung này dài hơn kích thước của cửa sổ, nó
+cuộn xuống khiến cho bạn không thể nào đọc hết được.<br />
+</p>
 <p>&nbsp;</p>
 <h3>less</h3>
-<p>The command less writes the contents of a file onto the screen a
-page at a time. Type </p>
-<p class="cli"> % less science.txt </p>
-<p> Press the [<b>space-bar</b>] if you want to see another page, and
-type [<b>q</b>] if you want to quit reading. As you can see, <span class="command">less</span> is used in preference to <span class="command">cat</span> for long files. </p>
-<p>&nbsp;</p>
-<h3>head</h3>
-<p>The <span class="command">head</span> command writes the first ten
-lines of a file to the screen. </p>
-<p> First clear the screen then type </p>
-<p class="cli"> % head science.txt </p>
-<p> Then type </p>
-<p class="cli"> % head -5 science.txt </p>
-<p> What difference did the -5 do to the head command? </p>
-<p>&nbsp;</p>
-<h3>tail</h3>
-<p>The <span class="command">tail</span> command writes the last ten
-lines of a file to the screen. </p>
-<p> Clear the screen and type </p>
-<p class="cli"> % tail science.txt </p>
-<p> Q. How can you view the last 15 lines of the file? </p>
-<p>&nbsp;</p>
-<h2>2.5 Searching the contents of a file </h2>
-<h3>Simple searching using less</h3>
-<p>Using <span class="command">less</span>, you can search though a
-text file for a keyword (pattern). For example, to search through <strong>science.txt</strong>
-for the word <b>'science'</b>, type </p>
-<p class="cli"> % less science.txt </p>
-<p> then, still in <span class="command">less</span>, type a forward
-slash [<b>/</b>] followed by the word to search</p>
-<p class="cli"> /science</p>
-<p> As you can see, <span class="command">less</span> finds and
-highlights the keyword. Type [<b>n</b>] to search for the next
-occurrence of the word. </p>
-<p>&nbsp;</p>
-<h3>grep (don't ask why it is called grep)</h3>
-<p><span class="command">grep</span> is one of many standard UNIX
-utilities. It searches files for specified words or patterns. First
-clear the screen, then type </p>
-<p class="cli"> % grep science science.txt </p>
-<p> As you can see, <span class="command">grep</span> has printed out
-each line containg the word <b>science</b>. </p>
-<p> Or has it ???? </p>
-<p> Try typing </p>
-<p class="cli"> % grep Science science.txt </p>
-<p> The <span class="command">grep</span> command is case sensitive;
-it distinguishes between Science and science. </p>
-<p> To ignore upper/lower case distinctions, use the -i option, i.e.
-type </p>
-<p class="cli"> % grep -i science science.txt </p>
-<p> To search for a phrase or pattern, you must enclose it in single
-quotes (the apostrophe symbol). For example to search for spinning top,
-type </p>
-<p class="cli"> % grep -i 'spinning top' science.txt </p>
-<p> Some of the other options of grep are: </p>
-<p> <b>-v </b>display those lines that do NOT match <br />
-<b>-n</b> precede each matching line with the line number <br />
-<b>-c </b>print only the total count of matched lines <br />
+<p>Lệnh này hiện nội dung của tập tin ra màn hình theo từng trang một.
+Bạn gõ:<br />
 </p>
-<p> Try some of them and see the different results. Don't forget, you
-can use more than one option at a time. For example, the number of
-lines without the words science or Science is</p>
+<p class="cli"> % less science.txt </p>
+<p>Nhấn [<span style="font-weight: bold;">dấu cách</span>] nếu bạn muốn
+xem trang tiếp theo, và gõ [<span style="font-weight: bold;">q</span>]
+nếu bạn muốn thoát. Bạn có thể thấy ta nên dùng&nbsp;<span class="command">less</span> với tập tin dài hơn là&nbsp;<span class="command">cat</span>.<br />
+</p>
+<p>&nbsp;</p>
+<h3>head (đầu)<br />
+</h3>
+<p>Lệnh&nbsp;<span class="command">head</span> in ra 10 dòng đầu của
+một tập tin ra màn hình.</p>
+<p>Đầu tiên hãy dọn sạch màn hình, sau đó gõ</p>
+<p class="cli"> % head science.txt </p>
+<p>Sau đó<br />
+</p>
+<p class="cli"> % head -5 science.txt</p>
+<p>Lựa chọn -5 tạo ra khác biệt như thế nào?</p>
+<p>&nbsp;</p>
+<h3>tail (đuôi)</h3>
+<p>Lệnh&nbsp;<span class="command">tail</span> in ra 10 dòng cuối của
+một tập tin ra màn hình.</p>
+<p>Dọn màn hình, sau đó gõ</p>
+<p class="cli"> % tail science.txt </p>
+<p>Làm thế nào để bạn có thể in được 15 dòng cuối ra màn hình?<br />
+</p>
+<p>&nbsp;</p>
+<h2>2.5 Tìm kiếm trong nội dung của tập tin<br />
+</h2>
+<h3>Tìm kiếm đơn giản bằng lệnh less<br />
+</h3>
+<p>Sử dụng less, bạn có thể tìm kiếm một từ khóa (mẫu tìm kiếm) trong
+một tập tin văn bản. Ví dụ, để tìm từ <span style="font-weight: bold;">'science'</span>
+trong tập tin <span style="font-weight: bold;">science.txt</span>, bạn
+gõ<br />
+</p>
+<p class="cli"> % less science.txt </p>
+<p>sau đó, vẫn trong giao diện&nbsp;<span class="command">less</span>,
+bạn gõ dấu xổ phải [<span style="font-weight: bold;">/</span>] tiếp
+theo là từ cần tìm<br />
+</p>
+<p class="cli"> /science</p>
+<p><span class="command">less</span>&nbsp;tìm và tô sáng từ khóa tìm
+thấy. Gõ [<span style="font-weight: bold;">n</span>] (next, tiếp) để
+tìm tiếp vẫn với từ khóa đó.<br />
+</p>
+<p>&nbsp;</p>
+<h3>grep<br />
+</h3>
+<p><span class="command">grep</span>&nbsp;là một trong những tiện ích
+tiêu chuẩn của UNIX. Nó tìm các từ và mẫu tìm kiếm được cho trong các
+tập tin. Đầu tiên, dọn sạch màn hình, sau đó gõ<br />
+</p>
+<p class="cli"> % grep science science.txt </p>
+<p><span class="command">grep</span>&nbsp;in ra tất cả các dòng có chứa
+từ <span style="font-weight: bold;">science</span>.</p>
+<p>Nhưng có đúng thế không ????</p>
+<p>Bạn thử gõ như thế này xem<br />
+</p>
+<p class="cli"> % grep Science science.txt</p>
+<p>Lệnh&nbsp;<span class="command">grep</span> có phân biệt chữ hoa và
+chữ thường; đối với nó, Science và science là khác nhau.</p>
+<p>Để bỏ phân biệt hoa/thường, bạn dùng lựa chọn -i. Như vậy, gõ</p>
+<p class="cli"> % grep -i science science.txt </p>
+<p>Để tìm kiếm một câu hoặc một mẫu dài, bạn phải đặt nó trong dấu
+ngoặc kép đơn ('). Ví dụ, để tìm cụm từ spinning top, bạn gõ<br />
+</p>
+<p class="cli"> % grep -i 'spinning top' science.txt</p>
+<p>Một vài tùy chọn khác của&nbsp;<span class="command">grep</span>:</p>
+<p> <b>-v </b>hiện những dòng KHÔNG chứa cụm cần tìm<br />
+<b>-n</b> thêm số thứ tự dòng ở đầu<br />
+<b>-c </b>in ra tổng số dòng có chứa cụm cần tìm<br />
+</p>
+
+<p>Hãy thử xem để thấy kết quả khác biệt ra sao. Đừng quên rằng bạn có
+thể dùng nhiều hơn một tùy chọn cùng một lúc. Ví dụ, lệnh để in ra tổng số dòng không chứa những từ science hay Science là<br />
+</p>
 <p class="cli"> % grep -ivc science science.txt </p>
 <p>&nbsp;</p>
-<h3>wc (word count)</h3>
-<p>A handy little utility is the <span class="command">wc</span>
-command, short for word count. To do a word count on <strong>science.txt</strong>,
-type </p>
+<h3>wc (word count - đếm từ)</h3>
+<p>Lệnh wc là một lệnh rất hữu ích. Để đếm tổng số từ trong tập tin science.txt, bạn gõ<br />
+ </p>
+
 <p class="cli"> % wc -w science.txt </p>
-<p> To find out how many lines the file has, type </p>
+<p>Để in ra tổng số dòng, bạn gõ<br />
+ </p>
+
 <p class="cli"> % wc -l science.txt </p>
-<h2>Summary </h2>
+<h2>Tổng kết<br />
+ </h2>
 <table align="center" border="1" cellpadding="5" cellspacing="0">
   <tbody>
     <tr>
-      <th>Command</th>
-      <th>Meaning</th>
+      <th>Lệnh<br />
+</th>
+      <th>Ý nghĩa<br />
+</th>
     </tr>
     <tr>
       <td class="command">cp <i>file1 file2</i></td>
-      <td>copy file1 and call it file2</td>
+      <td>chép file1 sang file2<br />
+</td>
     </tr>
     <tr>
       <td class="command">mv <i>file1 file2</i></td>
-      <td>move or rename file1 to file2</td>
+      <td>di chuyển hoặc đổi tên file1<br />
+</td>
     </tr>
     <tr>
       <td class="command">rm <i>file</i></td>
-      <td>remove a file</td>
+      <td>Xóa tập tin<br />
+</td>
     </tr>
     <tr>
       <td class="command">rmdir <i>directory</i></td>
-      <td>remove a directory</td>
+      <td>Xóa thư mục<br />
+</td>
     </tr>
     <tr>
       <td class="command">cat <i>file</i></td>
-      <td>display a file</td>
+      <td>Hiển thị tập tin<br />
+</td>
     </tr>
     <tr>
       <td class="command">less <i>file</i></td>
-      <td>display a file a page at a time</td>
+      <td>Hiển thị tập tin từng trang một<br />
+</td>
     </tr>
     <tr>
       <td class="command">head <i>file</i></td>
-      <td>display the first few lines of a file</td>
+      <td>Hiển thị một vài dòng đầu tiên<br />
+</td>
     </tr>
     <tr>
       <td class="command">tail <i>file</i></td>
-      <td>display the last few lines of a file</td>
+      <td>Hiển thị một vài dòng cuối<br />
+</td>
     </tr>
     <tr>
       <td class="command">grep <i>'keyword' file</i></td>
-      <td>search a file for keywords</td>
+      <td>Tìm kiếm từ khóa trong tập tin<br />
+</td>
     </tr>
     <tr>
       <td class="command">wc <i>file</i></td>
-      <td>count number of lines/words/characters in file</td>
+      <td>đếm số ký tự/chữ/dòng trong tập tin<br />
+</td>
     </tr>
   </tbody>
 </table>
